@@ -1,0 +1,27 @@
+
+<!-- ----------------------Assignment_2----------------------- -->
+<div class="assign2">
+<!--  <p>assignments works!</p>-->
+  <!-- 1. Add a input field with updates a property ('username')
+          via Two-Way-binding -->
+  <!--Two way binding with ngModel-->
+  <label>Username</label>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="username">
+
+  <!-- 2. Output the username property via String Interpolation -->
+  <!--String interolation with {}-->
+  <p>{{ username }}</p>
+
+  <!-- 3. Add a button which may only be clicked if the username
+          is NOT an empty string -->
+  <button
+    class="btn btn-primary"
+    [disabled]="!username"
+    (click)="username = ''">Reset Username!!!
+  </button>
+
+</div>
+

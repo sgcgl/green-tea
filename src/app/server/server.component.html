@@ -1,2 +1,9 @@
-
-<p>The Server Component</p>
+<!-- outputs -->
+<!-- String interpolation -->
+<!--property binding-->
+<!--ng style lets you dynamically update the styles -->
+<p
+  [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{online: serverStatus == 'online'}">
+  {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
+</p>
