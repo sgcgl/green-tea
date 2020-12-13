@@ -1,0 +1,28 @@
+
+h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  font-size: 5em;
+  font-weight: bold;
+  color: black;
+  -webkit-text-fill-color: ghostwhite;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  text-shadow: 2px 2px 10px ghostwhite;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.head-container {
+  box-shadow: 30px 30px 50px 5px white inset, -30px -30px 50px 5px white inset;
+  height: 250px;
+  margin-top: 45px;
+  width: auto;
+  background-size: 100% 100%;
+  background-image: url('../../assets/img/tea-land.jpg');
+  border-radius: 6em;
+}
+
+

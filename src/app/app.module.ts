@@ -6,26 +6,41 @@ import { CommonModule } from '@angular/common';
 
 // Import your component from directory
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
-import { ServersComponent } from './servers/servers.component';
-import { SuccessAlertComponent } from './success-alert/success-alert.component';
-import { WarningAlertComponent } from './warning-alert/warning-alert.component';
-import { AssignmentsComponent } from './assignments/assignments.component';
+import { HeaderComponent } from './header/header.component';
+import { BrandsComponent } from './brands/brands.component';
+import { BrandDetailComponent } from './brands/brand-detail/brand-detail.component';
+import { BrandListComponent } from './brands/brand-list/brand-list.component';
+import { BrandItemComponent } from './brands/brand-list/brand-item/brand-item.component';
+import { ItemsComponent } from './items/items.component';
+import { ItemDetailComponent } from './items/item-detail/item-detail.component';
+import { ItemListComponent } from './items/item-list/item-list.component';
+import { ItemComponent } from './items/item-list/item/item.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 
 // components you want angular to be aware of
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent,
-    ServersComponent,
-    SuccessAlertComponent,
-    WarningAlertComponent,
-    AssignmentsComponent
+    HeaderComponent,
+    BrandsComponent,
+    BrandDetailComponent,
+    BrandListComponent,
+    BrandItemComponent,
+    ItemsComponent,
+    ItemDetailComponent,
+    ItemListComponent,
+    ItemComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
+
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

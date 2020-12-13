@@ -16,4 +16,11 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+
+  loadedFeature = 'item';
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
+
 }
