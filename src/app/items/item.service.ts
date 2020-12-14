@@ -8,35 +8,46 @@ export class ItemService {
   itemSelected = new EventEmitter<Item>();
   private items: Item[] = [
     new Item(
-      'Milk Tea',
-      'Description of Milk Itea',
+      'Jasmin Milk Tea',
+      'Product Description For Milk Itea',
       './assets/img/boba-milk-tea.jpg',
       [
         new ItemUnits('Boba', 1),
         new ItemUnits('Jelly', 1),
         new ItemUnits('Puddin', 1),
-        new ItemUnits('Chia Seeds', 1)
       ]),
     new Item(
-      'Green Tea',
-      'Description of Green Tea',
+      'Jasmin Green Tea',
+      'Product Description For Green Tea',
       './assets/img/bubble-green-tea.png',
       [
         new ItemUnits('Boba', 4),
         new ItemUnits('Jelly', 2),
         new ItemUnits('Puddin', 1),
-        new ItemUnits('Chia Seeds', 1)
       ]
     ),
     new Item(
       'Strawberry Fruit Tea',
-      'Description of Strawberry Fruit Tea',
+      'Product Description For Strawberry Fruit Tea',
       './assets/img/strawb-fruit-tea.jpg',
       [
-        new ItemUnits('Boba', 2),
-        new ItemUnits('Jelly', 2),
-        new ItemUnits('Puddin', 2),
-        new ItemUnits('Chia Seeds', 2)
+        new ItemUnits('Fruit-pieces', 2),
+      ]
+    ),
+    new Item(
+      'Oi-Ocha Matcha Green Tea',
+      'Product Description For Matcha Green Tea',
+      './assets/img/Oi-Ocha-Matcha.jpg',
+      [
+        // new ItemUnits('', 0),
+      ]
+    ),
+    new Item(
+      'Yi-fang Fruit Tea',
+      'Product Description For Yi-Fang Fruit Tea',
+      './assets/img/yifang.jpg',
+      [
+        // new ItemUnits('Fruit-pieces', 2),
       ]
     ),
   ];

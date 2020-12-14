@@ -12,18 +12,23 @@ export class BrandListComponent implements OnInit {
   brands: Brand[] = [
     new Brand(
       'Itea',
-      'Description of Itea',
+      'Description For Itea',
       './assets/img/itea.png'
     ),
     new Brand(
       'ShareTea',
-      'Description of ShareTea',
+      'Description For ShareTea',
       './assets/img/sharetea.jpg'
     ),
     new Brand(
       'YiFang',
-      'Description of YiFang',
-      './assets/img/yifang.jpg'
+      'Description For YiFang',
+      './assets/img/yifang2.jpg'
+    ),
+    new Brand(
+      'Happy Lemon',
+      'Description For Happy Lemon',
+      './assets/img/happy-lemon.jpg'
     ),
   ];
 
