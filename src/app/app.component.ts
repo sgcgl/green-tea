@@ -8,11 +8,12 @@ import { Component } from '@angular/core';
   // styleUrls: ['./app.component.css']
   // Or when it's just some styles, you could also use it in the
   // following way
-  styles: [`
-    h3 {
-      color: dodgerblue;
-    }
-  `]
+  styleUrls: ['./app.component.css']
+  // styles: [`
+  //   h3 {
+  //     color: dodgerblue;
+  //   }
+  // `]
 })
 
 export class AppComponent {

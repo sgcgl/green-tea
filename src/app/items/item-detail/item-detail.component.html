@@ -1,1 +1,49 @@
-<p>item-detail works!</p>
+
+<div class="row">
+  <div class="col-xs-12">
+    <img
+      [src]="item.imagePath"
+      alt="{{ item.name }}"
+      class="img-responsive"
+      style="max-height: 200px;">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ item.name }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div
+      class="btn-group"
+      appDropdown>
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle">
+        Manage Items <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a (click)="onAddToShoppingList()" style="cursor: pointer;">Add To Shopping List</a></li>
+        <li><a href="#">Edit Item</a></li>
+        <li><a href="#">Delete Item</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    {{ item.description }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let itemUnit of item.itemUnits">
+        {{ itemUnit.name }} - {{ itemUnit.amount }}
+      </li>
+    </ul>
+  </div>
+</div>

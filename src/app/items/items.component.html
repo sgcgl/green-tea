@@ -1,13 +1,16 @@
 
-<div class="flex-container">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="top-choices">
-
-        <app-item-list></app-item-list>
-        <app-item-detail></app-item-detail>
-
-      </div>
-    </div>
+<div class="row">
+  <div class="col-md-5">
+<!--    <app-item-list-->
+<!--      (itemWasSelected)="selectedItem = $event"></app-item-list>-->
+    <app-item-list></app-item-list>
+  </div>
+  <div class="col-md-7">
+    <app-item-detail
+      *ngIf="selectedItem; else infoText"
+      [item]="selectedItem"></app-item-detail>
+    <ng-template #infoText>
+      <p>Please select an Item!</p>
+    </ng-template>
   </div>
 </div>

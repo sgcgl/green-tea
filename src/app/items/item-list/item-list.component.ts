@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 import { Item } from '../item.model';
+import {ItemService} from '../item.service';
 
 @Component({
   selector: 'app-item-list',
@@ -8,28 +9,13 @@ import { Item } from '../item.model';
   styleUrls: ['./item-list.component.css']
 })
 export class ItemListComponent implements OnInit {
+  // @Output() itemWasSelected = new EventEmitter<Item>();
+  items: Item[];
 
-  items: Item[] = [
-    new Item(
-      'Milk Tea',
-      'Description of Milk Itea',
-      './assets/img/boba-milk-tea.jpg'
-    ),
-    new Item(
-      'Green Tea',
-      'Description of Green Tea',
-      './assets/img/bubble-green-tea.png'
-    ),
-    new Item(
-      'Strawberry Fruit Tea',
-      'Description of Strawberry Fruit Tea',
-      './assets/img/strawb-fruit-tea.jpg'
-    ),
-  ];
+  constructor(private itemService: ItemService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.items = this.itemService.getItems();
   }
 
 }

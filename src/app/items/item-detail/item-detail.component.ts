@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Item} from '../item.model';
+import {ItemService} from '../item.service';
 
 @Component({
   selector: 'app-item-detail',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-detail.component.css']
 })
 export class ItemDetailComponent implements OnInit {
+  @Input() item: Item;
 
-  constructor() { }
+  constructor(private itemService: ItemService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  onAddToShoppingList() {
+    this.itemService.addItemUnitsToShoppingList(this.item.itemUnits);
   }
 
 }
