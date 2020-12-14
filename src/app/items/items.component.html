@@ -6,11 +6,6 @@
     <app-item-list></app-item-list>
   </div>
   <div class="col-md-7">
-    <app-item-detail
-      *ngIf="selectedItem; else infoText"
-      [item]="selectedItem"></app-item-detail>
-    <ng-template #infoText>
-      <p>Please select an Item!</p>
-    </ng-template>
+    <router-outlet></router-outlet>
   </div>
 </div>

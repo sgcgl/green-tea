@@ -4,8 +4,8 @@ import {EventEmitter} from '@angular/core';
 export class ShoppingListService {
   itemUnitsChanged = new EventEmitter<ItemUnits[]>();
   private itemUnits: ItemUnits[] = [
-    new ItemUnits('Boba', 2),
-    new ItemUnits('Puddin', 2),
+    // new ItemUnits('Boba', 2),
+    // new ItemUnits('Puddin', 2),
   ];
 
   // copy of the itemsUnit

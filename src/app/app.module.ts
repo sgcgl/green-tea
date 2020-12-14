@@ -19,6 +19,8 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import {ShoppingListService} from './shopping-list/shopping-list.service';
+import {AppRoutingModule} from './app-routing.module';
+import { ItemStartComponent } from './items/item-start/item-start.component';
 
 // components you want angular to be aware of
 @NgModule({
@@ -36,13 +38,15 @@ import {ShoppingListService} from './shopping-list/shopping-list.service';
     ShoppingListComponent,
     ShoppingEditComponent,
     DropdownDirective,
+    ItemStartComponent,
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    AppRoutingModule,
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

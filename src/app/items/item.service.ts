@@ -49,6 +49,10 @@ export class ItemService {
     return this.items.slice();
   }
 
+  getItem(index: number) {
+    return this.items[index];
+  }
+
   addItemUnitsToShoppingList(itemUnits: ItemUnits[]) {
     this.slService.addItemUnits(itemUnits);
   }

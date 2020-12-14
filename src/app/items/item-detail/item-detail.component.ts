@@ -1,6 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Item} from '../item.model';
 import {ItemService} from '../item.service';
+import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-item-detail',
@@ -8,11 +9,19 @@ import {ItemService} from '../item.service';
   styleUrls: ['./item-detail.component.css']
 })
 export class ItemDetailComponent implements OnInit {
-  @Input() item: Item;
+  item: Item;
+  id: number;
 
-  constructor(private itemService: ItemService) { }
+  constructor(private itemService: ItemService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(
+      (params: Params) => {
+        this.id = +params['id'];
+        this.item = this.itemService.getItem(this.id);
+      }
+    );
   }
 
   onAddToShoppingList() {

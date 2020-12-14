@@ -12,7 +12,8 @@
 <!--      [item]="itemElem"-->
 <!--      (itemSelected)="onItemSelected(itemElem)"></app-item>-->
     <app-item
-      *ngFor="let itemElem of items"
-      [item]="itemElem"></app-item>
+      *ngFor="let itemElem of items; let i = index"
+      [item]="itemElem"
+      [index]="i"></app-item>
   </div>
 </div>
